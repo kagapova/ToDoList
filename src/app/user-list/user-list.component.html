@@ -1,0 +1,48 @@
+<nav class="navbar navbar-light " style="background-color: #e3f2fd;">
+  <h1 class="navbar-brand mb-10">ToDoList</h1>
+</nav>
+<div class="bg-warning text-white text-center" *ngIf="!tasks.length">You do not have any current tasks yet</div>
+<div class="row justify-content-center list">
+  <div class="col-lg-8 " *ngFor="let task of tasks let num = index">
+    <div class="card "
+         [ngClass]="{
+    'bg-success':task.progres === true,
+    'bg-primary':task.progres === false
+  }" >
+      <div class="card-body text-center text-white">{{task.title}}</div>
+      <div class="card-header">{{task.summary}}</div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-sm btn-success" (click)="doneTask(num)" *ngIf="!task.progres" >Done!</button>
+        <button type="button" class="btn btn-sm btn-warning" (click)="editTask(num)" *ngIf="!task.progres">Edit</button>
+        <button type="button" class="btn btn-sm btn-danger" (click)="deleteTask(num)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar fixed-bottom navbar-light bg-faded">
+  <form [hidden]="!editor">
+    <div class="form-group row">
+      <label for="colFormLabelSm" class="col-sm-2 col-form-label">Title</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="colFormLabelSm"  [(ngModel)]="currentTask.title" name="title_form"  >
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2  col-form-label">Summary</label>
+      <div class="col-sm-10">
+        <textarea type="text" class="form-control" id="colFormLabel" [(ngModel)]="currentTask.summary" name="summary"   ></textarea>
+    </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="button" (click)="Submit()" class="btn btn-success">Done!</button>
+      </div>
+    </div>
+  </form>
+  <div class="form-group row" [hidden]="editor">
+    <div class="col-sm-10">
+      <button type="button" (click)="editor=true" class="btn btn-success">Add</button>
+    </div>
+  </div>
+</nav>
+

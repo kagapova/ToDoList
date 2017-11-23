@@ -1,0 +1,13 @@
+.navbar{
+  margin-bottom: 2%;
+}
+.navbar.fixed-bottom{
+  margin: 0;
+}
+.card{
+  margin-bottom: 2%;
+}
+.row.justify-content-center{
+  margin-bottom: 100px;
+}
+
