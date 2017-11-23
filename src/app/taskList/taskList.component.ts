@@ -3,7 +3,7 @@ import {Task} from '../models/task';
 import {TaskService} from '../services/task.service';
 
 @Component({
-  selector: 'app-user-list',
+  selector: 'app-task-list',
   templateUrl: './taskList.component.html',
   styleUrls: ['./taskList.component.css']
 })
