@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { UserListComponent } from './user-list/user-list.component';
+import { UserListComponent } from './taskList/taskList.component';
 import {AppRoutingModule} from "./app.routing.module";
-import {TaskService} from "./services/task.Service";
+import {TaskService} from "./services/task.service";
 import {FormsModule} from "@angular/forms";
 
 

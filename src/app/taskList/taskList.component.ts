@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {Task} from '../models/task';
-import {TaskService} from '../services/task.Service';
+import {TaskService} from '../services/task.service';
 
 @Component({
   selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.css']
+  templateUrl: './taskList.component.html',
+  styleUrls: ['./taskList.component.css']
 })
 export class UserListComponent implements OnInit {
 

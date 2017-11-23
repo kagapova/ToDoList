@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AppComponent} from './app.component';
 import {BrowserModule} from '@angular/platform-browser';
-import {UserListComponent} from "./user-list/user-list.component";
+import {UserListComponent} from "./taskList/taskList.component";
 
 
 const routes: Routes = [
